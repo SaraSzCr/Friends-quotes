@@ -9,7 +9,7 @@ function QuoteItem({ name, quote }) {
   );
 }
 
-QuoteItem.PropTypes = {
+QuoteItem.propTypes = {
   name: PropTypes.string.isRequired,
   quote: PropTypes.string.isRequired
 };

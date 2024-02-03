@@ -5,8 +5,8 @@ import DataQuotes from "../data/quotes.json";
 import { useState } from "react";
 
 function App() {
-  
-
+  const [quotes, setQuotes] = useState (DataQuotes);
+console.log(quotes);
 
   return (
     <div>
@@ -15,7 +15,7 @@ function App() {
       </header>
       <main className="main">
        <Filters/>
-        <QuoteList/>
+        <QuoteList quotes = {quotes}/>
       </main>
     </div>
   );

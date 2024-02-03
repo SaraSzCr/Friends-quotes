@@ -1,6 +1,7 @@
+import PropTypes from "prop-types";
 import QuoteItem from "./QuoteItem";
 
-function QuoteList() {
+function QuoteList(quotes) {
   return (
     <ul className="main__list">
       <li className="main__list--listItem">
@@ -10,4 +11,7 @@ function QuoteList() {
   );
 }
 
+QuoteList.propTypes = {
+  quotes: PropTypes.array,
+};
 export default QuoteList;
