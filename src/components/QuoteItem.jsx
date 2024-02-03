@@ -1,10 +1,16 @@
-function QuoteItem() {
+import PropTypes from "prop-types";
+
+function QuoteItem({ name, quote }) {
   return (
     <>
-      <p>Pivot! Pivot! Pivot! Pivot! Pivot! - </p>
-      <h4 className="characterName">Ross</h4>
+      <p>{quote}</p>
+      <h4 className="characterName">{name}</h4>
     </>
   );
 }
 
+QuoteItem.PropTypes = {
+  name: PropTypes.string.isRequired,
+  quote: PropTypes.string.isRequired
+};
 export default QuoteItem;

@@ -4,7 +4,7 @@ function QuoteList() {
   return (
     <ul className="main__list">
       <li className="main__list--listItem">
-        <QuoteItem/>
+        <QuoteItem name="Ross" quote="Pivot! Pivot! Pivot! Pivot! Pivot!" />
       </li>
     </ul>
   );
