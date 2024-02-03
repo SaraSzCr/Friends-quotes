@@ -1,4 +1,10 @@
-function Filters() {
+function Filters({handleFilterCharacter}) {
+
+  const handleInputCharacter = (event) => {
+    console.log(event.target.value)
+    handleFilterCharacter(event.target.value)
+
+  }
 
   return (
     <form className="main__form">
@@ -7,7 +13,6 @@ function Filters() {
       className="main__form--filter"
       type="text"
       name="text"
-      id="text"
       placeholder=""
     />
     <label htmlFor="text">Filtrar por personaje</label>
@@ -15,8 +20,8 @@ function Filters() {
       className="main__form--filter"
       type="text"
       name="text"
-      id="text"
       placeholder="Todos"
+      onInput={handleInputCharacter}
     />
   </form>
   );
