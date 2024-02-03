@@ -1,1 +1,39 @@
 @import 'core/reset';
+
+.title{
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: chocolate;
+}
+.main{
+  margin-top: 20px;
+  border-top: solid rgb(227, 221, 221);
+
+  &__form{
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+    justify-content: center;
+  };
+
+  &__list{
+    border: solid grey;
+    width: 50vw;
+    margin-top: 20px;
+
+    &--listItem{
+      display: flex;
+      gap: 4px;
+      align-items: center;
+      justify-content: center;
+
+    }
+  }
+
+  
+}
+.characterName{
+  color: coral;
+}
