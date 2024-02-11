@@ -1,8 +1,9 @@
 function Filters({ handleFilterCharacter, handleFilterTitle }) {
+  
+  
   const handleInputCharacter = (event) => {
-    handleFilterCharacter(event.target.value);
+    handleFilterCharacter (event.target.value)
   };
-
   const handleInputTitle = (event) => {
     handleFilterTitle(event.target.value);
   };

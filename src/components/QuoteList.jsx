@@ -19,6 +19,6 @@ const htmlQuotes = quotes.map ((quote, idx) => (
 }
 
 QuoteList.propTypes = {
-  quotes: PropTypes.array,
+  filteredQuotes: PropTypes.array,
 };
 export default QuoteList;

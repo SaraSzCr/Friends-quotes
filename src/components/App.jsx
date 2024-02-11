@@ -1,5 +1,5 @@
 import "../scss/App.scss";
-import Filters from "./Filetrs";
+import Filters from "./Filters";
 import QuoteList from "./QuoteList";
 import DataQuotes from "../data/quotes.json";
 import { useState } from "react";
@@ -7,24 +7,32 @@ import { useState } from "react";
 function App() {
   const [quotes] = useState(DataQuotes);
 
-  const [filterCharacter, setFilterCharacter] = useState("");
+  const [filterCharacter, setFilterCharacter] = useState("all");
 
   const handleFilterCharacter = (filterValue) => {
     setFilterCharacter(filterValue);
   };
 
-  const [filterTitle, setFilterTitle] = useState("");
-  const handleFilterTitle = (filterTitle) => {
-    setFilterTitle(filterTitle);
-  };
+  const filteredQuotes = quotes.filter ((quote) => {
+    if (filterCharacter === "all") {
+      return true;
+    }
+    else{
+      return quote.character===filterCharacter 
+    }
+    });
+  // const [filterTitle, setFilterTitle] = useState("");
+  // const handleFilterTitle = (filterTitle) => {
+  //   setFilterTitle(filterTitle);
+  // };
 
-  const filteredCharacter = quotes.filter((quote) =>
-    quote.character.toLowerCase().includes(filterCharacter)
-  );
+  // const filteredCharacter = quotes.filter((quote) =>
+  //   quote.character.toLowerCase().includes(filterCharacter)
+  // );
 
-  const filteredTitle = quotes.filter((quote) =>
-    quote.character.toLowerCase().includes(filterTitle)
-  );
+  // const filteredTitle = quotes.filter((quote) =>
+  //   quote.character.toLowerCase().includes(filterTitle)
+  // );
 
   return (
     <div>
@@ -34,9 +42,9 @@ function App() {
       <main className="main">
         <Filters
           handleFilterCharacter={handleFilterCharacter}
-          handleFilterTitle={handleFilterTitle}
+          // handleFilterTitle={handleFilterTitle}
         />
-        <QuoteList quotes={filteredCharacter} />
+        <QuoteList quotes={filteredQuotes} />
       </main>
     </div>
   );
