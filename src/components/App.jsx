@@ -29,7 +29,7 @@ function App() {
   return (
     <div>
       <header className="title">
-        <h2>Frases de Friends</h2>
+        <h1>Frases de Friends</h1>
       </header>
       <main className="main">
         <Filters

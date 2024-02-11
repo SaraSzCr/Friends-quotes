@@ -13,18 +13,22 @@ function Filters({ handleFilterCharacter, handleFilterTitle }) {
       <input
         className="main__form--filter"
         type="text"
-        name="text"
-        placeholder=""
+        name="quote"
+        id="quote"
         onInput={handleInputTitle}
       />
-      <label htmlFor="text">Filtrar por personaje</label>
-      <input
-        className="main__form--filter"
-        type="text"
-        name="text"
-        placeholder="Todos"
-        onInput={handleInputCharacter}
-      />
+      <label htmlFor="character">
+        Filtrar por personaje
+        <select onInput={handleInputCharacter}>
+          <option value="all">Todos</option>
+          <option value="Monica">Monica</option>
+          <option value="Ross">Ross</option>
+          <option value="Chandler">Chandler</option>
+          <option value="Phoebe">Phoebe</option>
+          <option value="Rachel">Rachel</option>
+          <option value="Joey">Joey</option>
+        </select>
+      </label>
     </form>
   );
 }
