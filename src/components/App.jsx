@@ -20,28 +20,16 @@ function App() {
     }
   };
 
-  const filteredQuotesByCharacter = quotes.filter((quote) => {
-    if (filterCharacter === "all") {
-      return true;
-    } else {
-      return quote.character === filterCharacter;
-    }
-  });
+  const filterAll = quotes
+    .filter((quote) => quote.quote.includes(filterQuote))
+    .filter((quote) => {
+      if (filterCharacter === "all") {
+        return true;
+      } else {
+        return quote.character === filterCharacter;
+      }
+    });
 
-  const filterAll = filteredQuotesByCharacter.filter((quote) =>
-    quote.quote.includes(filterQuote)
-  );
-  // const handleFilterTitle = (filterTitle) => {
-  //   setFilterTitle(filterTitle);
-  // };
-
-  // const filteredCharacter = quotes.filter((quote) =>
-  //   quote.character.toLowerCase().includes(filterCharacter)
-  // );
-
-  // const filteredTitle = quotes.filter((quote) =>
-  //   quote.character.toLowerCase().includes(filterTitle)
-  // );
 
   return (
     <div>
