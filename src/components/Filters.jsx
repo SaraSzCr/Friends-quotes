@@ -1,11 +1,11 @@
-function Filters({ handleFilterCharacter, handleFilterTitle }) {
+function Filters({ handleFilter}) {
   
   
   const handleInputCharacter = (event) => {
-    handleFilterCharacter (event.target.value)
+    handleFilter ("character", event.currentTarget.value)
   };
-  const handleInputTitle = (event) => {
-    handleFilterTitle(event.target.value);
+  const handleInputQuote = (event) => {
+    handleFilter("quote", event.currentTarget.value);
   };
 
   return (
@@ -16,7 +16,7 @@ function Filters({ handleFilterCharacter, handleFilterTitle }) {
         type="text"
         name="quote"
         id="quote"
-        onInput={handleInputTitle}
+        onInput={handleInputQuote}
       />
       <label htmlFor="character">
         Filtrar por personaje

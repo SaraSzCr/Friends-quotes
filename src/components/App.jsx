@@ -8,20 +8,29 @@ function App() {
   const [quotes] = useState(DataQuotes);
 
   const [filterCharacter, setFilterCharacter] = useState("all");
+  const [filterQuote, setFilterQuote] = useState("");
 
-  const handleFilterCharacter = (filterValue) => {
-    setFilterCharacter(filterValue);
+  const handleFilter = (filterText, filterValue) => {
+    console.log(filterText);
+
+    if (filterText === "quote") {
+      setFilterQuote(filterValue);
+    } else if (filterText === "character") {
+      setFilterCharacter(filterValue);
+    }
   };
 
-  const filteredQuotes = quotes.filter ((quote) => {
+  const filteredQuotesByCharacter = quotes.filter((quote) => {
     if (filterCharacter === "all") {
       return true;
+    } else {
+      return quote.character === filterCharacter;
     }
-    else{
-      return quote.character===filterCharacter 
-    }
-    });
-  // const [filterTitle, setFilterTitle] = useState("");
+  });
+
+  const filterAll = filteredQuotesByCharacter.filter((quote) =>
+    quote.quote.includes(filterQuote)
+  );
   // const handleFilterTitle = (filterTitle) => {
   //   setFilterTitle(filterTitle);
   // };
@@ -40,11 +49,8 @@ function App() {
         <h1>Frases de Friends</h1>
       </header>
       <main className="main">
-        <Filters
-          handleFilterCharacter={handleFilterCharacter}
-          // handleFilterTitle={handleFilterTitle}
-        />
-        <QuoteList quotes={filteredQuotes} />
+        <Filters handleFilter={handleFilter} />
+        <QuoteList quotes={filterAll} />
       </main>
     </div>
   );
