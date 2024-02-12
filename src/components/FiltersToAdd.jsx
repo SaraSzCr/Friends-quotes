@@ -1,14 +1,13 @@
-import PropTypes from "prop-types";
+ import PropTypes from "prop-types";
 
-function FiltersToAdd({ addText, setAddText }) {
-  
+function FiltersToAdd({ addText, setAddText, addCharacter, setAddCharacter}) {
   const handleInputAddText = (event) => {
     setAddText(event.currentTarget.value);
   };
 
   const handleInputAddCharacter = (event) => {
-    setAddText (event.currentTarget.value)
-  }
+    setAddCharacter(event.currentTarget.value);
+  };
   return (
     <form className="main__form2">
       <label htmlFor="text">Frase</label>
@@ -25,10 +24,10 @@ function FiltersToAdd({ addText, setAddText }) {
         type="text"
         name="addCharacter"
         id="addCharacter"
-        value={addText}
+        value={addCharacter}
         onChange={handleInputAddCharacter}
       />
-      <button className="main__form2--btn">Añadir nueva frase</button>
+      {/* <button className="main__form2--btn" onClick={handleClick}>Añadir nueva frase</button> */}
     </form>
   );
 }
@@ -36,5 +35,7 @@ function FiltersToAdd({ addText, setAddText }) {
 FiltersToAdd.propTypes = {
   addText: PropTypes.string,
   setAddText: PropTypes.func.isRequired,
+  addCharacter: PropTypes.string,
+  setAddCharacter: PropTypes.func.isRequired,
 };
 export default FiltersToAdd;
