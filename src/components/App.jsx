@@ -1,8 +1,8 @@
 import "../scss/App.scss";
+import { useState } from "react";
 import Filters from "./Filters";
 import QuoteList from "./QuoteList";
 import DataQuotes from "../data/quotes.json";
-import { useState } from "react";
 import FiltersToAdd from "./FiltersToAdd";
 
 function App() {
@@ -11,7 +11,7 @@ function App() {
   const [filterCharacter, setFilterCharacter] = useState("all");
   const [filterQuote, setFilterQuote] = useState("");
 
-  const [addtext, setAddText] = useState("");
+  const [addText, setAddText] = useState("");
 
   const handleFilter = (filterText, filterValue) => {
     console.log(filterText);
@@ -44,7 +44,7 @@ function App() {
         <section className="title">
           <h3>Añadir una nueva frase</h3>
         </section>
-        <FiltersToAdd />
+        <FiltersToAdd addText={addText} setAddText={setAddText}/>
       </main>
     </div>
   );

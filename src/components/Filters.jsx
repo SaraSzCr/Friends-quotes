@@ -1,3 +1,5 @@
+import PropTypes from "prop-types";
+
 function Filters({ handleFilter}) {
   
   
@@ -35,5 +37,9 @@ function Filters({ handleFilter}) {
     
   );
 }
+
+Filters.propTypes = {
+  handleFilter: PropTypes.func.isRequired,
+};
 
 export default Filters;
