@@ -1,41 +1,48 @@
-@import 'core/reset';
+@import "core/reset";
 
-.title{
+.title {
   margin-top: 20px;
   display: flex;
   align-items: center;
   justify-content: center;
   color: rgb(237, 133, 59);
 }
-.main{
+.main {
   margin-top: 20px;
   border-top: solid rgb(227, 221, 221);
 
-  &__form{
+  &__form {
     display: flex;
     gap: 15px;
     margin-top: 20px;
     justify-content: center;
-  };
+  }
 
-  &__list{
+  &__list {
     display: flex;
     flex-direction: column;
     margin-top: 20px;
 
-    &--listItem{
+    &--listItem {
       border: solid rgb(249, 194, 194);
       margin-top: 5px;
       display: flex;
       gap: 4px;
-      // align-items: center;
-      // justify-content: center;
-
     }
   }
 
-  
+  &__form2 {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+    justify-content: center;
+    
+
+    &--btn {
+      background-color: burlywood;
+    }
+  }
 }
-.characterName{
+.characterName {
   color: coral;
 }

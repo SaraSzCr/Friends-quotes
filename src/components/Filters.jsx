@@ -31,6 +31,8 @@ function Filters({ handleFilter}) {
         </select>
       </label>
     </form>
+
+    
   );
 }
 

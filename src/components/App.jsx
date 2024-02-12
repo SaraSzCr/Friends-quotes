@@ -3,12 +3,15 @@ import Filters from "./Filters";
 import QuoteList from "./QuoteList";
 import DataQuotes from "../data/quotes.json";
 import { useState } from "react";
+import FiltersToAdd from "./FiltersToAdd";
 
 function App() {
   const [quotes] = useState(DataQuotes);
 
   const [filterCharacter, setFilterCharacter] = useState("all");
   const [filterQuote, setFilterQuote] = useState("");
+
+  const [addtext, setAddText] = useState("");
 
   const handleFilter = (filterText, filterValue) => {
     console.log(filterText);
@@ -30,7 +33,6 @@ function App() {
       }
     });
 
-
   return (
     <div>
       <header className="title">
@@ -39,6 +41,10 @@ function App() {
       <main className="main">
         <Filters handleFilter={handleFilter} />
         <QuoteList quotes={filterAll} />
+        <section className="title">
+          <h3>Añadir una nueva frase</h3>
+        </section>
+        <FiltersToAdd />
       </main>
     </div>
   );
