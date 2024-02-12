@@ -27,6 +27,7 @@ function FiltersToAdd({ addText, setAddText, addCharacter, setAddCharacter}) {
         value={addCharacter}
         onChange={handleInputAddCharacter}
       />
+      <input className="main__form2--btn" type="button" value="Añadir nueva frase "/> 
       {/* <button className="main__form2--btn" onClick={handleClick}>Añadir nueva frase</button> */}
     </form>
   );
