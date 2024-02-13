@@ -39,7 +39,6 @@ function FiltersToAdd({
         type="button"
         value="Añadir nueva frase "
       />
-      {/* <button className="main__form2--btn" onClick={handleClick}>Añadir nueva frase</button> */}
     </form>
   );
 }
