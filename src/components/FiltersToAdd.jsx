@@ -2,17 +2,20 @@ import PropTypes from "prop-types";
 
 function FiltersToAdd({
   addText,
-  setAddText,
+  // setAddText,
   addCharacter,
-  setAddCharacter,
+  // setAddCharacter,
   handleClick,
+  handleAdd,
 }) {
   const handleInputAddText = (event) => {
-    setAddText(event.currentTarget.value);
+    handleAdd ("text", event.currentTarget.value)
+    // setAddText(event.currentTarget.value);
   };
 
   const handleInputAddCharacter = (event) => {
-    setAddCharacter(event.currentTarget.value);
+    handleAdd ("name",event.currentTarget.value)
+    // setAddCharacter(event.currentTarget.value);
   };
   return (
     <form className="main__form2">
@@ -45,9 +48,10 @@ function FiltersToAdd({
 
 FiltersToAdd.propTypes = {
   addText: PropTypes.string,
-  setAddText: PropTypes.func.isRequired,
+  // setAddText: PropTypes.func.isRequired,
   addCharacter: PropTypes.string,
-  setAddCharacter: PropTypes.func.isRequired,
+  // setAddCharacter: PropTypes.func.isRequired,
   handleClick: PropTypes.func.isRequired,
+  handleAdd: PropTypes.func.isRequired,
 };
 export default FiltersToAdd;

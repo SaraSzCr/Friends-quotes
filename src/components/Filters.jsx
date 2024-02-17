@@ -18,7 +18,7 @@ function Filters({ handleFilter}) {
         type="text"
         name="quote"
         id="quote"
-        onInput={handleInputQuote}
+        onInput={handleInputQuote}  
       />
       <label htmlFor="character">
         Filtrar por personaje
