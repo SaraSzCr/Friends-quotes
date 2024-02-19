@@ -11,6 +11,6 @@ function QuoteItem({ name, quote }) {
 
 QuoteItem.propTypes = {
   name: PropTypes.string.isRequired,
-  quote: PropTypes.string.isRequired
+  quote: PropTypes.string.isRequired,
 };
 export default QuoteItem;

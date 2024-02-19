@@ -25,15 +25,18 @@ function App() {
   };
 
   const handleClick = () => {
-
     const newObj = {
-      "quote": addText,
-      "character": addCharacter
-      };
+      quote: addText,
+      character: addCharacter,
+    };
+    if (addText.length === 0 && addCharacter.length === 0) {
+      return;
+    }
 
-    setQuotes( [...quotes, newObj]  );
-
-  }
+    setQuotes([...quotes, newObj]);
+    setAddText("");
+    setAddCharacter("");
+  };
 
   const filterAll = quotes
     .filter((quote) => quote.quote.includes(filterQuote))
@@ -56,7 +59,13 @@ function App() {
         <section className="title">
           <h3>Añadir una nueva frase</h3>
         </section>
-        <FiltersToAdd handleClick={handleClick} addText={addText} setAddText={setAddText} addCharacter={addCharacter} setAddCharacter={setAddCharacter}/>
+        <FiltersToAdd
+          handleClick={handleClick}
+          addText={addText}
+          setAddText={setAddText}
+          addCharacter={addCharacter}
+          setAddCharacter={setAddCharacter}
+        />
       </main>
     </div>
   );
