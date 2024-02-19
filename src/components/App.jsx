@@ -17,23 +17,12 @@ function App() {
   const handleFilter = (filterText, filterValue) => {
     console.log(filterText);
 
-
     if (filterText === "quote") {
       setFilterQuote(filterValue);
     } else if (filterText === "character") {
       setFilterCharacter(filterValue);
     }
   };
-
-  const handleAdd = (textValue, nameValue) => {
-    console.log(textValue, nameValue)
-
-    if (textValue ===  "text"){
-      setAddText (textValue);
-    } else if (nameValue === "name"){
-      setAddCharacter(nameValue);
-    }
-  }
 
   const handleClick = () => {
 
@@ -67,7 +56,7 @@ function App() {
         <section className="title">
           <h3>Añadir una nueva frase</h3>
         </section>
-        <FiltersToAdd handleClick={handleClick} addText={addText} addCharacter={addCharacter} handleAdd={handleAdd}/>
+        <FiltersToAdd handleClick={handleClick} addText={addText} setAddText={setAddText} addCharacter={addCharacter} setAddCharacter={setAddCharacter}/>
       </main>
     </div>
   );
