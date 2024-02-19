@@ -31,11 +31,11 @@ function App() {
     };
     if (addText.length === 0 && addCharacter.length === 0) {
       return;
+    } else {
+      setQuotes([...quotes, newObj]);
+      setAddText("");
+      setAddCharacter("");
     }
-
-    setQuotes([...quotes, newObj]);
-    setAddText("");
-    setAddCharacter("");
   };
 
   const filterAll = quotes

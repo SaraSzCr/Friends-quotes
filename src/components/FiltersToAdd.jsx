@@ -36,7 +36,7 @@ function FiltersToAdd({
       <input
         onClick={handleClick}
         className="main__form2--btn"
-        type="submit"
+        type="button"
         value="Añadir nueva frase "
       />
     </form>
