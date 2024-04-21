@@ -53,5 +53,8 @@ npm run dev
 
 Este comando: **Abre automáticamente una ventana en el navegador y muestra la página web**
 
-## Autora
- [Sara Sánchez Crespo](https://github.com/SaraSzCr)
+## Autora 👩‍💻
+ Sara Sánchez Crespo
+[Github] (https://github.com/SaraSzCr)
+[Linkedin] (http://linkedin.com/in/sara-sanchez-crespo-b0538029a)
+[email] (scresposara@gmail.com)
