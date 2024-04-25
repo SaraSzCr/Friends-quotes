@@ -12,20 +12,20 @@ function Filters({ handleFilter}) {
 
   return (
     <form className="main__form">
-      <section>
+      <section className="main__form--filter">
         <label htmlFor="text">Filtrar por frase</label>
         <input
-          className="main__form--filter"
+          className="main__form--filter--input"
           type="text"
           name="quote"
           id="quote"
           onInput={handleInputQuote}
         />
       </section>
-      <section>
+      <section className="main__form--filter">
         <label htmlFor="character">
           Filtrar por personaje
-          <select onInput={handleInputCharacter}>
+          <select className="main__form--filter--select" onInput={handleInputCharacter}>
             <option value="all">Todos</option>
             <option value="Monica">Monica</option>
             <option value="Ross">Ross</option>

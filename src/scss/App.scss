@@ -14,7 +14,8 @@
   justify-content: center;
   // margin-top: 20px;
   border-top: solid rgb(227, 221, 221);
-  border: solid red;
+
+  // border: solid red;
   padding: 5px;
 
   &__form {
@@ -22,13 +23,24 @@
     flex-direction: column;
     gap: 25px;
     // margin-top: 20px;
-    
+
     justify-content: center;
 
-    &--filter{
-      height: 20px;
-      width: 150px;
-      
+    &--filter {
+      border: solid blue;
+      display: flex;
+      gap: 20px;
+
+      &--input {
+        height: 20px;
+        width: 150px;
+      }
+      &--select{
+        border: solid orange;
+        // display: flex;
+        // flex-direction: row;
+        margin-left: 10px;
+      }
     }
   }
 
@@ -51,7 +63,6 @@
     gap: 15px;
     margin-top: 20px;
     justify-content: center;
-    
 
     &--btn {
       background-color: burlywood;
